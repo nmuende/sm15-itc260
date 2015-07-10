@@ -19,6 +19,7 @@ class News_model extends CI_Model {
 		        return $query->row_array();
 		}//end get_news
 
+<<<<<<< HEAD
 		public function set_news()
 		{
 		    $this->load->helper('url');
@@ -36,4 +37,6 @@ class News_model extends CI_Model {
 		}//end set_news
 
 
+=======
+>>>>>>> 29987db... Adds News model and controller
 }//end News_model
