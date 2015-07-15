@@ -58,10 +58,13 @@ $route['translate_uri_dashes'] = FALSE;
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';*/
 
-
 //routes for news controller
+$route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
 $route['news'] = 'news';
+
+//routes for rss controller
+$route['rss'] = 'rss';
 
 //routes for static pages
 $route['(:any)'] = 'pages/view/$1';
