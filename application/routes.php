@@ -53,16 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-<<<<<<< HEAD
-//if you see the url:  use the news controller and go to the view with the query(slug)
-=======
 //if you see the url:  use the news controllower and go to the view with the query(slug)
->>>>>>> 29987db... Adds News model and controller
 /*$route['news'] = 'news/view/$1';
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';*/
 
-<<<<<<< HEAD
 //routes for news controller
 $route['news/create'] = 'news/create';
 $route['news/(:any)'] = 'news/view/$1';
@@ -77,13 +72,3 @@ $route['default_controller'] = 'pages/view';
 
 
 $route['index'] = 'index';
-=======
-
-//routes for news controller
-$route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
-
-//routes for static pages
-$route['(:any)'] = 'pages/view/$1';
-$route['default_controller'] = 'pages/view';
->>>>>>> 29987db... Adds News model and controller

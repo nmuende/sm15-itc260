@@ -4,16 +4,11 @@ class News extends CI_Controller {
 
         public function __construct()
         {
-<<<<<<< HEAD
                 //this echos across the controller
                 parent::__construct();
                 $this->load->model('news_model');
                                         //'banner' references custom_config. 2nd parameter is what it should be
                 $this->config->set_item('banner', 'News Banner');
-=======
-                parent::__construct();
-                $this->load->model('news_model');
->>>>>>> 29987db... Adds News model and controller
         }//end construct
 
         public function index()
@@ -21,15 +16,9 @@ class News extends CI_Controller {
                 $data['news'] = $this->news_model->get_news();
                 $data['title'] = 'News archive';
 
-<<<<<<< HEAD
                 //$this->load->view('templates/header', $data);
                 $this->load->view('news/index', $data);
                 //$this->load->view('templates/footer');
-=======
-                $this->load->view('templates/header', $data);
-                $this->load->view('news/index', $data);
-                $this->load->view('templates/footer');
->>>>>>> 29987db... Adds News model and controller
         }//end index
 
         public function view($slug = NULL)
@@ -43,7 +32,6 @@ class News extends CI_Controller {
 
                 $data['title'] = $data['news_item']['title'];
 
-<<<<<<< HEAD
                 //$this->load->view('templates/header', $data);
                 $this->load->view('news/view', $data);
                 //$this->load->view('templates/footer');
@@ -84,10 +72,4 @@ class News extends CI_Controller {
             }
         }//end create
 
-=======
-                $this->load->view('templates/header', $data);
-                $this->load->view('news/view', $data);
-                $this->load->view('templates/footer');
-        }//end view
->>>>>>> 29987db... Adds News model and controller
 }//end News
