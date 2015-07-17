@@ -7,4 +7,3 @@ $this->load->view($this->config->item('theme') . 'header');
 	echo $news_item['text'];
 
 $this->load->view($this->config->item('theme') . 'footer');
-?>

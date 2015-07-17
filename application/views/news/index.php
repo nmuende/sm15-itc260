@@ -1,10 +1,7 @@
 <?php
 //views/news/index.php
-<<<<<<< HEAD
 									//'theme' referencing custom_config
 $this->load->view($this->config->item('theme') . 'header');
-=======
->>>>>>> 29987db... Adds News model and controller
 ?>
 <h2><?php echo $title ?></h2>
 
@@ -16,12 +13,7 @@ $this->load->view($this->config->item('theme') . 'header');
         </div>
         <p><a href="<?php echo $news_item['slug'] ?>">View article</a></p>
 
-<<<<<<< HEAD
 <?php endforeach ?>
 
 <?php 
 $this->load->view($this->config->item('theme') . 'footer');
-?>
-=======
-<?php endforeach ?>
->>>>>>> 29987db... Adds News model and controller

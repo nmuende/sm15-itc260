@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//if you see the url:  use the news controllower and go to the view with the query(slug)
+//if you see the url:  use the news controller and go to the view with the query(slug)
 /*$route['news'] = 'news/view/$1';
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';*/

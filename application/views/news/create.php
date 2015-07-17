@@ -1,9 +1,6 @@
 <?php
 //views/news/create.php
-<<<<<<< HEAD
 $this->load->view($this->config->item('theme') . 'header');
-=======
->>>>>>> 4bd33ec... Adds News create controller and ability to add news items and shreds of rss lurking
 ?>
 <h2><?php echo $title ?></h2>
 
@@ -21,11 +18,7 @@ $this->load->view($this->config->item('theme') . 'header');
 
     <input type="submit" name="submit" value="Create news item" />
 
-<<<<<<< HEAD
 </form>
 <?php
 $this->load->view($this->config->item('theme') . 'footer');
 ?>
-=======
-</form>
->>>>>>> 4bd33ec... Adds News create controller and ability to add news items and shreds of rss lurking
