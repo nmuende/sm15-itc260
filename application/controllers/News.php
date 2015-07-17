@@ -4,8 +4,11 @@ class News extends CI_Controller {
 
         public function __construct()
         {
+                //this echos across the controller
                 parent::__construct();
                 $this->load->model('news_model');
+                                        //'banner' references custom_config. 2nd parameter is what it should be
+                $this->config->set_item('banner', 'News Banner');
         }//end construct
 
         public function index()
@@ -13,9 +16,9 @@ class News extends CI_Controller {
                 $data['news'] = $this->news_model->get_news();
                 $data['title'] = 'News archive';
 
-                $this->load->view('templates/header', $data);
+                //$this->load->view('templates/header', $data);
                 $this->load->view('news/index', $data);
-                $this->load->view('templates/footer');
+                //$this->load->view('templates/footer');
         }//end index
 
         public function view($slug = NULL)
@@ -29,9 +32,9 @@ class News extends CI_Controller {
 
                 $data['title'] = $data['news_item']['title'];
 
-                $this->load->view('templates/header', $data);
+                //$this->load->view('templates/header', $data);
                 $this->load->view('news/view', $data);
-                $this->load->view('templates/footer');
+                //$this->load->view('templates/footer');
         }//end view
 
         public function create()
@@ -46,9 +49,9 @@ class News extends CI_Controller {
 
             if ($this->form_validation->run() === FALSE)
             {//data not submitted
-                $this->load->view('templates/header', $data);
+                //$this->load->view('templates/header', $data);
                 $this->load->view('news/create', $data);//added $data in case there is data to pass to create
-                $this->load->view('templates/footer', $data);//added $data in case there is data to pass to footer
+                //$this->load->view('templates/footer', $data);//added $data in case there is data to pass to footer
 
             }
             else

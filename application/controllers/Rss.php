@@ -10,17 +10,17 @@ class Rss extends CI_Controller {
                 $response = file_get_contents($request);
                 $xml = simplexml_load_string($response);
                 print '<h1>' . $xml->channel->title . '</h1>';
+                $count=0;
                 foreach($xml->channel->item as $story)
                 {
-                    echo '<a href="' . $story->link . '">' . $story->title . '</a><br />'; 
-                    echo '<p>' . $story->description . '</p><br /><br />';
+                    if($count==3){
+                        break;
+                    }
+                        echo '<a href="' . $story->link . '"></a><br />'; 
+                        echo '<p>' . $story->description . '</p><br /><br />';
+                        $count++;
                 }
-                //$data['news'] = $this->news_model->get_news();
-                //$data['title'] = 'News archive';
 
-                //$this->load->view('templates/header', $data);
-                //$this->load->view('news/index', $data);
-                //$this->load->view('templates/footer');
         }//end index
 
 
