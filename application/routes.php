@@ -69,6 +69,3 @@ $route['rss'] = 'rss';
 //routes for static pages
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
-
-
-$route['index'] = 'index';

@@ -66,9 +66,9 @@ class News extends CI_Controller {
                 
                 $data['success'] = $success;
 
-                $this->load->view('templates/header', $data);
+                //$this->load->view('templates/header', $data);
                 $this->load->view('news/feedback', $data);
-                $this->load->view('templates/footer', $data);//added $data in case there is data to pass to footer
+                //$this->load->view('templates/footer', $data);//added $data in case there is data to pass to footer
             }
         }//end create
 
