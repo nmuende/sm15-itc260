@@ -2,25 +2,32 @@
 //Rss.php
 class Rss extends CI_Controller {
 
-        public function index()
-        {
-                $data['rss']=$this->rss_model->get_rss();
-                $data['title']='Rss Feed';
+    public function __construct(){
 
-                $this->load->view('rss/index', $data);
-        }//end index
+        //this echos the controller
+        parent::__construct();
+        $this->load->model('rss_model');
+                                        //'banner' references custom_config. 2nd parameter is what it should be
+        $this->config->set_item('banner', 'RSS');
+        $this->config->set_item('title', 'RSS feed');
+    }
 
-        public function view($slug = NULL){
-            $data['rss_feed'] = $this->rss_model->get_rss($slug);
+    public function index(){
+        $data['rss'] = $this->rss_model->get_rss();
+        $data['title'] = 'RSS feed';
+        $this->load->view('rss/index', $data);
+    }
 
-            if(empty($data['rss_feed'])){
-                show_404();
-                echo "No rss feed chosen";
-            }
+    public function view($slug = NULL)
+    {
+        $data['rss'] = $this->rss_model->get_rss($slug);
 
-            $data['title']=$data['rss_item']['title'];
+        if(empty($data['rss_item'])){
+            show_404();
+        }
 
-            $this->load->view('rss/view',$data);
-        }//end view
-
+        $data['rss'] = $this->rss_model->get_rss();
+        $data['title'] = 'RSS feed';
+        $this->load->view('rss/view', $data);
+    }//end get_rss
 }//end Rss

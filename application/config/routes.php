@@ -65,7 +65,7 @@ $route['news'] = 'news';
 
 //routes for rss controller
 $route['rss'] = 'rss';
-$route['rss/(:any)'] = 'rss/view/$1';
+$route['rss'] = 'rss/view/$1';
 
 //routes for static pages
 $route['(:any)'] = 'pages/view/$1';

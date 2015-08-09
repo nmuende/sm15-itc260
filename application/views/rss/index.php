@@ -1,19 +1,19 @@
 <?php
-//views/news/index.php
+//views/rss/index.php
 									//'theme' referencing custom_config
-$this->load->view($this->config->item('theme') . 'header');
-?>
+$this->load->view($this->config->item('theme') . 'header');?>
+
 <h2><?php echo $title ?></h2>
 
-<?php foreach ($news as $news_item): ?>
+<div class="main">
 
-        <h3><?php echo $news_item['title'] ?></h3>
-        <div class="main">
-                <?php echo $news_item['text'] ?>
-        </div>
-        <p><a href="<?php echo $news_item['slug'] ?>">View article</a></p>
+	<?php foreach ($rss->channel->item as $rss_item): ?>
 
-<?php endforeach ?>
+	    <h3><?php echo $rss_item->title; ?></h3>
+	            <?php echo $rss_item->description; ?>
+	    <p><a href="<?php echo $rss_item->link; ?>">View Article</a></p>
 
-<?php 
-$this->load->view($this->config->item('theme') . 'footer');
+	<?php endforeach ?>
+</div>
+
+<?php $this->load->view($this->config->item('theme') . 'footer');
