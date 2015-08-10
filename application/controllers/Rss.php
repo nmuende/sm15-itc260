@@ -20,13 +20,11 @@ class Rss extends CI_Controller {
 
     public function view($slug = NULL)
     {
-        $data['rss'] = $this->rss_model->get_rss($slug);
+        $data['rss_item'] = $this->rss_model->get_rss($slug);
 
         if(empty($data['rss_item'])){
             show_404();
         }
-
-        $data['rss'] = $this->rss_model->get_rss();
         $data['title'] = 'RSS feed';
         $this->load->view('rss/view', $data);
     }//end get_rss

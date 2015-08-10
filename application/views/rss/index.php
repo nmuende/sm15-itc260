@@ -6,14 +6,11 @@ $this->load->view($this->config->item('theme') . 'header');?>
 <h2><?php echo $title ?></h2>
 
 <div class="main">
+	<p><a href="<?php echo site_url('rss/view/science'); ?>">View Science RSS Feed</a></p>
+	<p><a href="<?php echo site_url('rss/view/tech'); ?>">View Tech RSS Feed</a></p>
+	<p><a href="<?php echo site_url('rss/view/business'); ?>">View Business RSS Feed</a></p>
 
-	<?php foreach ($rss->channel->item as $rss_item): ?>
-
-	    <h3><?php echo $rss_item->title; ?></h3>
-	            <?php echo $rss_item->description; ?>
-	    <p><a href="<?php echo $rss_item->link; ?>">View Article</a></p>
-
-	<?php endforeach ?>
 </div>
+
 
 <?php $this->load->view($this->config->item('theme') . 'footer');

@@ -2,9 +2,9 @@
 //News_model.php
 class Rss_model extends CI_Model {
 
-	public function get_rss($slug = FALSE)
+	public function get_rss($slug = NULL)
 	{
-        if($slug == FALSE){
+        if($slug == NULL){
             $request = "https://news.google.com/news?cf=all&hl=en&pz=1&ned=us&output=rss";
             $response = file_get_contents($request);
             $xml = simplexml_load_string($response);
